@@ -9,6 +9,14 @@ public class BackstagePassesItem extends Item {
 	@Override
 	public void update() {
 		// TODO Auto-generated method stub
+		if(this.hasPassedSellInDate()) {
+			quality = 0;
+		}else {
+			if(sellIn>10)quality++;
+			else if(sellIn>5)quality = quality +2;
+			else quality = quality +2;
+			sellIn--;
+		}
 		
 	}
 	
