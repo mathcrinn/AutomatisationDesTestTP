@@ -13,14 +13,15 @@ class ShopTest {
 	@BeforeEach
 	void setup() {
 		ArrayList<Item> items = new ArrayList<Item>();
-		items.add(new NormalItem(6, 10, "normal 1"));
-		items.add(new NormalItem(0, 10, "normal 2"));
-		items.add(new NormalItem(0, -2, "normal 3"));
-		items.add(new CheeseItem(10, 10,"Aged Brie"));
-		items.add(new NormalItem(10, 60,"Quality+50"));
-		items.add(new LegendaryItem(80, "Sulfuras"));
-		items.add(new BackstagePassesItem(12,10, "Backstage passes"));
-		items.add(new ConjuredItem(27,10, "Conjured"));
+		items.add(new NormalItem(6, 10, "normal 1",5));
+		items.add(new NormalItem(0, 10, "normal 2",5));
+		items.add(new NormalItem(0, -2, "normal 3",5));
+		items.add(new CheeseItem(10, 10,"Aged Brie",5));
+		items.add(new NormalItem(10, 60,"Quality+50",5));
+		items.add(new LegendaryItem(80, "Sulfuras",5));
+		items.add(new BackstagePassesItem(12,10, "Backstage passes",5));
+		items.add(new ConjuredItem(27,10, "Conjured",5));
+		items.add(new NormalItem(27,10, "Conjured",7));
 		
 		this.shop = new Shop(items);
 	}
@@ -84,6 +85,11 @@ class ShopTest {
 	void shouldConjuredItem() {
 		this.shop.updateInventory();
 		assertEquals(25, this.shop.items.get(7).getSellIn());
+	}
+	
+	@Test
+	void shouldGetValue() {
+		assertEquals(7, this.shop.items.get(8).getValue());
 	}
 
 }

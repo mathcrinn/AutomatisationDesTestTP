@@ -2,8 +2,8 @@ package com.gildedrose;
 
 public class CheeseItem extends Item{
 	
-	public CheeseItem(int sellIn, int quality, String name) {
-		super(sellIn, quality, name);
+	public CheeseItem(int sellIn, int quality, String name, int basePrice) {
+		super(sellIn, quality, name, basePrice);
 	}
 
 	@Override

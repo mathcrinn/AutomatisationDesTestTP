@@ -2,8 +2,8 @@ package com.gildedrose;
 
 public class NormalItem extends Item{
 
-	public NormalItem(int sellIn, int quality, String name) {
-		super(sellIn, quality, name);
+	public NormalItem(int sellIn, int quality, String name, int basePrice) {
+		super(sellIn, quality, name, basePrice);
 	}
 
 	@Override
