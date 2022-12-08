@@ -34,30 +34,4 @@ public abstract class Item {
 		return quality;
 	}
 	
-	/*
-	 * TP5 protected String name;
-	 * 
-	 * public Item(String name, int sellIn, int quality) { this.name = name;
-	 * this.sellIn = sellIn; if(quality <= 50)this.quality = quality; //maximum
-	 * quality is 50 else this.quality = 0; } 
-	 *
-	 * 
-	 * 
-	 */
- 
-	/*TP 6 avant réfractor
-
-	public void update() {
-		this.sellIn--;
-		if(this.name .compareTo("Aged Brie")==0) {
-			this.quality++;
-		}else {
-			this.quality--;
-			if (this.sellIn < 0)
-				this.quality--;
-			if(this.quality<0)this.quality=0;
-			if(this.quality>50)this.quality=50;
-		}
-	}
-	*/
 }

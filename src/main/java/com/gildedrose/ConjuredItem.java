@@ -9,7 +9,7 @@ public class ConjuredItem extends Item {
 	@Override
 	public void update() {
 		if(this.hasPassedSellInDate()) {
-			quality = quality - 2; //degrades twice as fast
+			quality = quality - 2;
 		}else {
 			quality--;
 			sellIn = sellIn -2;
