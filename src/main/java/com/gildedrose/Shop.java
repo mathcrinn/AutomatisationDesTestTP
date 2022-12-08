@@ -14,6 +14,5 @@ public class Shop {
 		for(Item item : items) {
 			item.update();
 		}
-		
 	}
 }
