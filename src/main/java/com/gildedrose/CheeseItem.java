@@ -1,20 +1,17 @@
 package com.gildedrose;
 
 public class CheeseItem extends Item{
-
-	public CheeseItem(String name, int sellIn, int quality) {
-		super(name, sellIn, quality);
+	
+	public CheeseItem(int sellIn, int quality, String name) {
+		super(sellIn, quality, name);
 	}
 
 	@Override
 	public void update() {
-		if(this.hasPassedSellInDate()) {
-			if(quality == 1) quality = 0;
-			else quality = quality - 2; //degrades twice as fast
-		}else {
-			quality++;
-			sellIn--;
-		}
+		quality++;
+		sellIn--;
+		if(this.quality<0)this.quality=0;
+		if(this.quality>50)this.quality=50;
 	}
 
 }
