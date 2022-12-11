@@ -26,7 +26,7 @@ class ItemsRepositoryTest {
 	@Test
 	void shouldSaveInventory() {
 		try {
-			repo.SaveInventory(items);
+			repo.saveInventory(items);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -39,7 +39,7 @@ class ItemsRepositoryTest {
 	@Test
 	void shouldGetInventory() {
 		try {
-			items = repo.GetInventory();
+			items = repo.getInventory();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -50,7 +50,7 @@ class ItemsRepositoryTest {
 	@Test
 	void shouldFindItem() {
 		try {
-			assertNotNull(repo.FindItem("Normal",20));
+			assertNotNull(repo.findItem("Normal",20));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

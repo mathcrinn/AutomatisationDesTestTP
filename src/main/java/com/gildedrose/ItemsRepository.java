@@ -15,7 +15,7 @@ public class ItemsRepository {
 		this.file = new File(inventoryCsvFilePath);
 	}
 	
-	public void SaveInventory(ArrayList<Item> items) throws IOException {
+	public void saveInventory(ArrayList<Item> items) throws IOException {
 		FileWriter writer = new FileWriter(file);
 		for (Item item : items){
 			if(item instanceof NormalItem)writer.write("Normal;");
@@ -27,7 +27,7 @@ public class ItemsRepository {
 		writer.close();
 	}
 	
-	public ArrayList<Item> GetInventory() throws FileNotFoundException {
+	public ArrayList<Item> getInventory() throws FileNotFoundException {
 		Item item = null;
 		ArrayList<Item> items = new ArrayList<Item>();
 		Scanner scanner = new Scanner(file);
@@ -43,7 +43,7 @@ public class ItemsRepository {
 		return items;
 	}
 	
-	public Item FindItem(String type,int quality) throws FileNotFoundException {
+	public Item findItem(String type,int quality) throws FileNotFoundException {
 		Scanner scanner = new Scanner(file);
 		Item item = null;
 		while (scanner.hasNextLine()) {

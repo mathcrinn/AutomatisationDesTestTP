@@ -13,7 +13,7 @@ public class ConsoleUI {
 	public static void main(String[] args) {
 		repo = new ItemsRepository("./inventory.csv");
 		try {
-			items = repo.GetInventory();
+			items = repo.getInventory();
 			shop = new Shop(items);
 		
 			for(int i=0;i<args.length;i++) {
@@ -29,7 +29,7 @@ public class ConsoleUI {
 						break;
 					case "-updateInventory" :
 						shop.updateInventory();
-						repo.SaveInventory(shop.items);
+						repo.saveInventory(shop.items);
 						break;
 					case "-sellItem" :
 						break;
