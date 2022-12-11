@@ -15,4 +15,8 @@ public class Shop {
 			item.update();
 		}
 	}
+	
+	public void getInventory() {
+		
+	}
 }
